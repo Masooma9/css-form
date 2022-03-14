@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+ <title>cssform.htmls</title>
+ <style>
+	body{border: 8px solid #FA8072;
+	background-color: #87CEFA;
+	margin:0px;
+	padding:8%;
+	font-family:Verdana;
+	}
+	
+	h1{text-align:center;
+	font-size:50px;
+	}
+	input {width:1200px;
+	height:20px;
+	border-style:none;
+	}
+	#sub{background-color:#32CD32;
+	height:30px;
+	}
+	textarea {width:1200px;
+	height:100px
+	}
+ </style>
+</head>
+
+<body>
+  <h1>Student Registeration Form</h1>
+  <hr>
+  <form action="/action_page.php" method="post">
+	Firstname<br>
+	<input type="text" name="firstname" placeholder="Firstname" required><br>
+ 	<br>
+ 	Middlename:<br>
+ 	<input type="text" name="middlename" placeholder="Middlename" required><br>
+ 	<br>
+ 	Lastname:<br>
+ 	<input type="text" name=:"lastname" placeholder="Lastname" required><br>
+ 	<br>
+ 	Course:
+	<select name="course" required>
+ 		<option value="Mathematics">Mathematics</option>
+		<option value="Physics">Physics</option>
+		<option value="Geography">Geography</option>
+		<option value="History">History</option>
+		<option value="Biology">Biology</option>
+	</select>
+	<br><br>
+	Gender:<br>
+	<input type="radio" name="gender" value="Male" style="width:10px;" required="required" checked>Male
+	<input type="radio" name="gender" value="Female" style="width:10px;">Female
+	<input type="radio" name="gender" value="Other" style="width:10px;">Other
+	<br><br>
+	Phone:<br>
+	<input type="text" name="code" value="+91" readonly>
+	<br><br>
+	<input type="tel" name="usertel" placeholder="phone no." required>
+	<br><br>
+	Current Adress:<br>
+	<textarea name="address" placeholder="Current Address"> </textarea>
+	<br><br>
+	<strong>Email</strong><br>
+	<input type="email" name="email" placeholder="Enter Email" required>
+	<br><br>
+	<strong>Password</strong><br>
+	<input type="password" name="password" placeholder="Enter Password" pattern="(?=.2\d)(?=.*[a-z])(?=.*[A-Z])(?=.1[!@#$%^&*_=+-]).{5,}"  required>
+	<br><br>
+	<strong>Re-type Password</strong><br>
+	<input type="password" name="password" placeholder="Enter Password" pattern="(?=.2\d)(?=.*[a-z])(?=.*[A-Z])(?=.1[!@#$%^&*_=+-]).{5,}" required>
+	<br><br>
+	<input type="submit" id="sub" value="Register" height="30px">
+	
+  </form>
+</body>
+
+</html>
